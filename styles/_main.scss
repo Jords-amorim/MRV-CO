@@ -1,6 +1,20 @@
 @import 'variables';
 @import 'utils';
 
-
-
-  
+main {
+    padding: 1.5rem;  
+    margin: auto;  
+ 
+    section {
+       margin-bottom: $Q-Md-40;
+    }
+    
+    h1 {
+       @include text(18px, 27px, bold, $Q-Cr-Cnz_1)
+    }
+ 
+    button {
+       @include button();
+    }
+ 
+ }
