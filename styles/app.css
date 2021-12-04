@@ -91,7 +91,7 @@ header nav span {
 }
 
 main {
-  padding: 1.5rem;
+  padding: 24px;
   margin: auto;
 }
 
@@ -104,6 +104,7 @@ main h1 {
   line-height: 27px;
   font-weight: bold;
   color: #242625;
+  margin-bottom: 8px;
 }
 
 main button {
@@ -125,5 +126,42 @@ main button {
 
 main button:hover {
   width: 152px;
+}
+
+main .mainExplore p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #242625;
+  margin-bottom: 24px;
+}
+
+main .mainExplore img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+main .mainExplore .mainExploreLogoCtn {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+main .mainExplore .mainExploreLogoCtn img {
+  margin: auto;
+}
+
+main .mainExplore .mainExploreLogoCtn button {
+  height: 48px;
+  width: 152px;
+  cursor: pointer;
+  border: none;
+  border: 2px solid #006B3F;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #006B3F;
+  background-color: #FFFFFF;
 }
 /*# sourceMappingURL=app.css.map */

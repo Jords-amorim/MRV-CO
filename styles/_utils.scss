@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .flex {
 	display: flex;
@@ -6,10 +6,14 @@
 }
 
 @mixin gradient() {
-	background-image: linear-gradient(to right,$Q-Cr-Vrd_Prc_1 , $Q-Cr-Vrd_Prc_2)
+	background-image: linear-gradient(to right, $Q-Cr-Vrd_Prc_1, $Q-Cr-Vrd_Prc_2);
 }
 
-@mixin button() {
+@mixin Q-Spr_Brd-2() {
+	border: $Q-Md-2 solid $Q-Cr-Vrd_Prc_1;
+}
+
+@mixin buttonPrimary() {
 	height: $Q-Md-48;
 	width: $Q-Md-144;
 
@@ -29,12 +33,21 @@
 	}
 }
 
-@mixin text(
-	$fontSize, 
-	$lineHeight, 
-	$font-weight,
-	$color
-	) {
+@mixin A-Btn-Fld_Brd() {
+	height: $Q-Md-48;
+	width: $Q-Md-152;
+
+	cursor: pointer;
+	border: none;
+	@include Q-Spr_Brd-2();
+	border-radius: $Q-Md-8;
+
+	@include text($Q-Md-16, $Q-Md-16, bold, $Q-Cr-Vrd_Prc_1);
+
+	background-color: $Q-Cr-Brc;
+}
+
+@mixin text($fontSize, $lineHeight, $font-weight, $color) {
 	font-size: $fontSize;
 	line-height: $lineHeight;
 	font-weight: $font-weight;
