@@ -1,10 +1,15 @@
-.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, main .mainOurSpace .arrow-prev, main .mainOurSpace .arrow-next {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @font-face {
@@ -38,13 +43,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, main .mainOurSpace .arrow-prev, main .mainOurSpace .arrow-next {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header .headerWorkWith {
@@ -96,13 +106,18 @@ header nav span {
   color: #242625;
 }
 
-.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, main .mainOurSpace .arrow-prev, main .mainOurSpace .arrow-next {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .accordion .accordion-item {
@@ -245,6 +260,85 @@ main .mainOurSpace a {
   color: #242625;
 }
 
+main .mainOurSpace .carousel-wrapper {
+  height: 176px;
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 397px;
+  margin-top: 24px;
+  border-radius: 16px;
+}
+
+main .mainOurSpace .carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main .mainOurSpace .arrow-prev {
+  left: 0;
+  right: 0;
+  top: 40%;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: #006b3f;
+  border-radius: 0 8px 8px 0;
+}
+
+main .mainOurSpace .arrow-next {
+  right: 0;
+  top: 40%;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: #006b3f;
+  border-radius: 8px 0 0 8px;
+}
+
+main .mainOurSpace [id^="item"] {
+  display: none;
+}
+
+main .mainOurSpace .item-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url("../assets/img-our-space.png");
+  background-size: cover;
+}
+
+main .mainOurSpace .item-2 {
+  background: url("../assets/img-hero-mobile.png");
+  background-size: cover;
+}
+
+main .mainOurSpace .item-3 {
+  background: url("../assets/img-our-space.png");
+  background-size: cover;
+}
+
+main .mainOurSpace *:target ~ .item-1 {
+  opacity: 0;
+}
+
+main .mainOurSpace #item-1:target ~ .item-1 {
+  opacity: 1;
+}
+
+main .mainOurSpace #item-2:target ~ .item-2,
+main .mainOurSpace #item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
+
 main .mainAvailableVacancies form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,7 +357,8 @@ main .mainAvailableVacancies form {
       align-content: center;
 }
 
-main .mainAvailableVacancies form select, main .mainAvailableVacancies form input {
+main .mainAvailableVacancies form select,
+main .mainAvailableVacancies form input {
   width: 100%;
   margin-bottom: 24px;
 }

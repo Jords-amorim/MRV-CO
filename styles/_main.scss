@@ -1,6 +1,6 @@
 @import "variables";
 @import "utils";
-@import 'accordion';
+@import "accordion";
 
 main {
    padding: $Q-Md-24;
@@ -19,8 +19,6 @@ main {
       @include text(14px, 21px, normal, $Q-Cr-Cnz_1);
       margin-bottom: $Q-Md-24;
    }
-
-   
 }
 
 main .mainExplore {
@@ -58,6 +56,86 @@ main .mainOurSpace {
    a {
       @include text(14px, 21px, bold, $Q-Cr-Cnz_1);
    }
+
+   .carousel-wrapper {
+      height: $Q-Md-176;
+      position: relative;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      overflow: hidden;
+      max-width: 397px;
+      margin-top: $Q-Md-24;
+      border-radius: $Q-Md-16;
+   }
+
+   .carousel-item {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+   }
+
+   .arrow-prev {
+      left: 0;
+      right: 0;
+      top: 40%;
+      position: absolute;
+      @extend .flex;
+      width: $Q-Md-48;
+      height: $Q-Md-48;
+      background-color: #006b3f;
+      border-radius: 0 $Q-Md-8 $Q-Md-8 0;
+   }
+
+   .arrow-next {
+      right: 0;
+      top: 40%;
+      position: absolute;
+      @extend .flex;
+      width: $Q-Md-48;
+      height: $Q-Md-48;
+      background-color: #006b3f;
+      border-radius:  $Q-Md-8 0 0 $Q-Md-8;
+   }
+
+   [id^="item"] {
+      display: none;
+   }
+
+   .item-1 {
+      z-index: 2;
+      opacity: 1;
+      background: url("../assets/img-our-space.png");
+      background-size: cover;
+   }
+
+   .item-2 {
+      background: url("../assets/img-hero-mobile.png");
+      background-size: cover;
+   }
+
+   .item-3 {
+      background: url("../assets/img-our-space.png");
+      background-size: cover;
+   }
+
+   *:target ~ .item-1 {
+      opacity: 0;
+   }
+
+   #item-1:target ~ .item-1 {
+      opacity: 1;
+   }
+
+   #item-2:target ~ .item-2,
+   #item-3:target ~ .item-3 {
+      z-index: 3;
+      opacity: 1;
+   }
 }
 
 main .mainAvailableVacancies {
@@ -68,7 +146,8 @@ main .mainAvailableVacancies {
       justify-content: center;
       align-content: center;
 
-      select, input {
+      select,
+      input {
          width: 100%;
          margin-bottom: $Q-Md-24;
       }
