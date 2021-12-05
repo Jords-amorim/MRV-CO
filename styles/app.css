@@ -9,24 +9,25 @@
 
 @font-face {
   font-family: 'AvertaStd';
-  src: url("../fonts/AvertaStd-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: bold;
-}
-@font-face {
-  font-family: 'AvertaStd';
   src: url("../fonts/AvertaStd-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'AvertaStd';
+  src: url("../fonts/AvertaStd-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0;
   outline: 0;
   font-family: 'AvertaStd';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -121,6 +122,14 @@ main h1 {
   margin-bottom: 8px;
 }
 
+main p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #242625;
+  margin-bottom: 24px;
+}
+
 main button {
   height: 48px;
   width: 144px;
@@ -140,14 +149,6 @@ main button {
 
 main button:hover {
   width: 152px;
-}
-
-main .mainExplore p {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: normal;
-  color: #242625;
-  margin-bottom: 24px;
 }
 
 main .mainExplore img {
@@ -178,5 +179,45 @@ main .mainExplore .mainExploreLogoCtn button {
   font-weight: bold;
   color: #006B3F;
   background-color: #FFFFFF;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main .mainOurSpace a {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #242625;
+}
+
+main .mainAvailableVacancies form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main .mainAvailableVacancies form select, main .mainAvailableVacancies form input {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+main .mainAvailableVacancies form label {
+  width: 100%;
+}
+
+main .mainAvailableVacancies form button {
+  width: 144px;
 }
 /*# sourceMappingURL=app.css.map */

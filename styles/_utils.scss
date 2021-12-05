@@ -45,6 +45,7 @@
 	@include text($Q-Md-16, $Q-Md-16, bold, $Q-Cr-Vrd_Prc_1);
 
 	background-color: $Q-Cr-Brc;
+	box-shadow: none;
 }
 
 @mixin text($fontSize, $lineHeight, $font-weight, $color) {

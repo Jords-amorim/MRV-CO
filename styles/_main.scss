@@ -2,7 +2,7 @@
 @import "utils";
 
 main {
-   padding:  $Q-Md-24;
+   padding: $Q-Md-24;
    margin: auto;
 
    section {
@@ -14,16 +14,20 @@ main {
       margin-bottom: $Q-Md-8;
    }
 
+   p {
+      @include text(14px, 21px, normal, $Q-Cr-Cnz_1);
+      margin-bottom: $Q-Md-24;
+   }
+
    button {
       @include buttonPrimary();
    }
 }
 
 main .mainExplore {
-   p {
-      @include text(14px, 21px, normal, $Q-Cr-Cnz_1);
-      margin-bottom: $Q-Md-24;
-   }
+   // p {
+   //    margin-bottom: $Q-Md-24;
+   // }
 
    img {
       display: block;
@@ -32,16 +36,44 @@ main .mainExplore {
    }
 
    .mainExploreLogoCtn {
-     text-align: center;
-     margin-bottom: $Q-Md-24;
-     display: inline-block;
+      text-align: center;
+      margin-bottom: $Q-Md-24;
+      display: inline-block;
 
-     
-     img {
-        margin: auto;
-     }
+      img {
+         margin: auto;
+      }
       button {
          @include A-Btn-Fld_Brd();
+      }
+   }
+}
+
+main .mainOurSpace {
+   a {
+      @include text(14px, 21px, bold, $Q-Cr-Cnz_1);
+   }
+}
+
+main .mainAvailableVacancies {
+   form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+
+      select, input {
+         width: 100%;
+         margin-bottom: $Q-Md-24;
+      }
+
+      label {
+         width: 100%;
+      }
+
+      button {
+         width: $Q-Md-144;
       }
    }
 }

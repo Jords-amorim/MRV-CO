@@ -1,14 +1,22 @@
 @font-face {
     font-family: 'AvertaStd';
+    src: url('../fonts/AvertaStd-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AvertaStd';
     src: url('../fonts/AvertaStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: 0;
-    font-family: AvertaStd;
+    font-family: 'AvertaStd';
+    box-sizing: border-box;
 }
 
 html,
