@@ -1,0 +1,46 @@
+.accordion {
+  
+  .accordion-item {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 400px;
+    padding-bottom: $Q-Md-24;
+    margin-top: $Q-Md-24;
+    cursor: pointer;
+    @include BorderBottom($Q-Cr-Vrd_Prc_4);
+  }
+}
+
+.accordion-header {
+  @extend .flex;
+  justify-content: space-between;
+  
+  h2 {
+    @include text($Q-Md-16, $Q-Md-16, bold, $Q-Cr-Vrd_Prc_4);
+  }  
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.accordion-body {
+  p {
+  margin: 0;
+  padding-top: 1rem;
+  }
+}
+
+.accordion-item.active .accordion-body {
+  max-height: 10rem;
+}
+
+.accordion-item.active img {
+  transform: rotate(180deg);
+}
+
+img {
+  transition: transform 0.2 ease;
+}

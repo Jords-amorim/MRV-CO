@@ -19,15 +19,13 @@ main {
       margin-bottom: $Q-Md-24;
    }
 
-   button {
-      @include buttonPrimary();
-   }
+   
 }
 
 main .mainExplore {
-   // p {
-   //    margin-bottom: $Q-Md-24;
-   // }
+   button {
+      @include buttonPrimary();
+   }
 
    img {
       display: block;
@@ -46,6 +44,12 @@ main .mainExplore {
       button {
          @include A-Btn-Fld_Brd();
       }
+   }
+}
+
+main .mainOurValues {
+   p {
+      margin: 0;
    }
 }
 

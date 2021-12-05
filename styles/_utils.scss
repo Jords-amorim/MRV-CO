@@ -9,8 +9,18 @@
 	background-image: linear-gradient(to right, $Q-Cr-Vrd_Prc_1, $Q-Cr-Vrd_Prc_2);
 }
 
-@mixin Q-Spr_Brd-2() {
-	border: $Q-Md-2 solid $Q-Cr-Vrd_Prc_1;
+@mixin Border($color) {
+	border: $Q-Md-2 solid $color;
+}
+@mixin BorderBottom($color) {
+	border-bottom: $Q-Md-2 solid $color;
+}
+
+@mixin text($fontSize, $lineHeight, $font-weight, $color) {
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	font-weight: $font-weight;
+	color: $color;
 }
 
 @mixin buttonPrimary() {
@@ -39,7 +49,7 @@
 
 	cursor: pointer;
 	border: none;
-	@include Q-Spr_Brd-2();
+	@include Border($Q-Cr-Vrd_Prc_1);
 	border-radius: $Q-Md-8;
 
 	@include text($Q-Md-16, $Q-Md-16, bold, $Q-Cr-Vrd_Prc_1);
@@ -48,9 +58,4 @@
 	box-shadow: none;
 }
 
-@mixin text($fontSize, $lineHeight, $font-weight, $color) {
-	font-size: $fontSize;
-	line-height: $lineHeight;
-	font-weight: $font-weight;
-	color: $color;
-}
+

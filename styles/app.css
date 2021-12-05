@@ -1,4 +1,4 @@
-.flex, header .headerWorkWith, header nav li, header nav ul li a {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,7 +38,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.flex, header .headerWorkWith, header nav li, header nav ul li a {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,7 +96,7 @@ header nav span {
   color: #242625;
 }
 
-.flex, header .headerWorkWith, header nav li, header nav ul li a {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,7 +130,7 @@ main p {
   margin-bottom: 24px;
 }
 
-main button {
+main .mainExplore button {
   height: 48px;
   width: 144px;
   cursor: pointer;
@@ -147,7 +147,7 @@ main button {
   transition: ease;
 }
 
-main button:hover {
+main .mainExplore button:hover {
   width: 152px;
 }
 
@@ -181,6 +181,10 @@ main .mainExplore .mainExploreLogoCtn button {
   background-color: #FFFFFF;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+main .mainOurValues p {
+  margin: 0;
 }
 
 main .mainOurSpace a {
@@ -219,5 +223,56 @@ main .mainAvailableVacancies form label {
 
 main .mainAvailableVacancies form button {
   width: 144px;
+}
+
+.accordion .accordion-item {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 400px;
+  padding-bottom: 24px;
+  margin-top: 24px;
+  cursor: pointer;
+  border-bottom: 2px solid #219653;
+}
+
+.accordion-header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.accordion-header h2 {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #219653;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease;
+}
+
+.accordion-body p {
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.accordion-item.active .accordion-body {
+  max-height: 10rem;
+}
+
+.accordion-item.active img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+img {
+  -webkit-transition: -webkit-transform 0.2 ease;
+  transition: -webkit-transform 0.2 ease;
+  transition: transform 0.2 ease;
+  transition: transform 0.2 ease, -webkit-transform 0.2 ease;
 }
 /*# sourceMappingURL=app.css.map */
