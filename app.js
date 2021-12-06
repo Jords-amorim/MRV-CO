@@ -12,29 +12,31 @@ let error = false
 
 document.querySelector("#selectType")
     .addEventListener('change', (event) => {
-        console.log(event)
-        event.isTrusted
-            ? document.querySelector("#requiredSelectType").innerHTML = ''
-            : ''
+        if(event.isTrusted){
+            document.querySelector("#requiredSelectType").innerHTML = ''
+            document.querySelector("#sendform").innerHTML = ''
+        } else return ''
 
         error = false
     });
 
 document.querySelector("#selectArea")
     .addEventListener('change', (event) => {
-        event.isTrusted
-            ? document.querySelector("#requiredSelectArea").innerHTML = ''
-            : ''
+        if(event.isTrusted) {
+            document.querySelector("#requiredSelectArea").innerHTML = ''
+            document.querySelector("#sendform").innerHTML = ''
+        } else return ''
 
         error = false
     });
 
 document.querySelector("#selectVacancy")
     .addEventListener('keydown', (event) => {
-        console.log(event.key)
-        event.key
-            ? document.querySelector("#requiredSelectVacancy").innerHTML = ''
-            : ''
+
+        if(  event.key) {
+            document.querySelector("#requiredSelectVacancy").innerHTML = ''
+            document.querySelector("#sendform").innerHTML = ''
+        } else return ''
 
         error = false
     });
