@@ -13,11 +13,16 @@ header {
         h1 {
             @include text(18px, 22px, bold, $Q-Cr-Brc);
         }
+
     }
 
     nav {
         padding: $Q-Md-24;
         padding-bottom: 0;
+
+        @media (min-width: 1365px) {
+            padding: $Q-Md-32 $Q-Md-56 $Q-Md-48 $Q-Md-56;
+        }
 
         ul {
             display: flex;

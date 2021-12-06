@@ -1,7 +1,7 @@
 @import "variables";
 @import "utils";
 @import "accordion";
-@import 'aboutBrand';
+@import "aboutBrand";
 
 main {
    padding: $Q-Md-24;
@@ -177,7 +177,7 @@ main .mainAvailableVacancies {
          @include buttonPrimary($Q-Cr-Vrd_Prc_4);
       }
 
-       .required {
+      .required {
          color: $Q-Cr-Or;
          margin-bottom: 0;
       }
@@ -193,4 +193,63 @@ main .mainAvailableVacancies {
 
 .main.active {
    display: none;
+}
+
+//Telas maiores 1366px
+
+@media (min-width: 1365px) {
+   main {
+      padding: 0;
+      section {
+         margin-bottom: $Q-Md-96;
+      }
+
+      h1 {
+         @include text($Q-Md-40, 60px, bold, $Q-Cr-Cnz_1);
+         margin-bottom: 0;
+      }
+
+      .mainExplore {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         align-items: center;
+         padding: 0 $Q-Md-56;
+
+         section {
+            margin-bottom: $Q-Md-96;
+         }
+
+         h1 {
+            @include text($Q-Md-40, 60px, bold, $Q-Cr-Cnz_1);
+            margin-bottom: 0;
+         }
+
+         div {
+            max-width: 543px;
+         }
+         .main-explore-logo-wrapper {
+            text-align: center;
+         }
+
+         #aboutBrand {
+            margin-right: 32px;
+         }
+      }
+
+      .mainOurValues {
+         display: grid;
+         grid-template-columns: 1fr auto;
+         padding-left: 56px;
+         
+         .our-values-wrapper {
+            max-width: 824px;
+         }
+         .accordion-wrapper {
+            max-width: 824px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: $Q-Md-40;
+         }
+      }
+   }
 }
