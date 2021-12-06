@@ -238,8 +238,8 @@ main .mainExplore .mainExploreLogoCtn button {
   width: 152px;
   cursor: pointer;
   border: none;
-  border: 2px solid #006B3F;
   border-radius: 8px;
+  border: 2px solid #006B3F;
   font-size: 16px;
   line-height: 16px;
   font-weight: bold;
@@ -339,7 +339,11 @@ main .mainOurSpace #item-3:target ~ .item-3 {
   opacity: 1;
 }
 
-main .mainAvailableVacancies form {
+main .mainAvailableVacancies p {
+  margin-bottom: 0;
+}
+
+main .mainAvailableVacancies .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -357,17 +361,60 @@ main .mainAvailableVacancies form {
       align-content: center;
 }
 
-main .mainAvailableVacancies form select,
-main .mainAvailableVacancies form input {
+main .mainAvailableVacancies .form-container select,
+main .mainAvailableVacancies .form-container input {
+  height: 40px;
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 4px;
+  border-radius: 8px;
+  border: 2px solid #5D615F;
+  color: #5d615f;
 }
 
-main .mainAvailableVacancies form label {
+main .mainAvailableVacancies .form-container label {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #242625;
   width: 100%;
+  margin-top: 16px;
 }
 
-main .mainAvailableVacancies form button {
+main .mainAvailableVacancies .form-container button {
   width: 144px;
+  margin-top: 24px;
+  height: 48px;
+  width: 144px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #219653;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition: ease;
+  transition: ease;
+}
+
+main .mainAvailableVacancies .form-container button:hover {
+  width: 152px;
+}
+
+main .mainAvailableVacancies .form-container .required {
+  color: #F68B28;
+  margin-bottom: 0;
+}
+
+main .mainAvailableVacancies .success {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: bold;
+  color: #219653;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 24px;
 }
 /*# sourceMappingURL=app.css.map */

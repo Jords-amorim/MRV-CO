@@ -166,20 +166,29 @@
             <p>
                 Encontre a oportunidade que mais combina com você:
             </p>
-            <form>
-                <label for="">Em qual cidade você quer trabalhar</label>
-                <select>
-                    <option>Selecionar um tipo</option>
+            <div class="form-container">
+                <label>Em qual cidade você quer trabalhar</label>
+                <select id="selectType">
+                    <option value="">Selecionar um tipo</option>
+                    <option value="Minas Gerais">Minas Gerais</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
                 </select>
-                <label for="">Qual sua área de atuação</label>
-                <select>
-                    <option>Selecionar área</option>
+                <p class="required" id="requiredSelectType"></p>
+                <label>Qual sua área de atuação</label>
+                <select id="selectArea">
+                    <option value="">Selecionar área</option>
+                    <option value="technology">Tecnologia</option>
+                    <option value="financial">Financeiro</option>
+                    <option value="humanResources">Recursos Humanos</option>
+                    <option value="marketing">Marketing</option>
                 </select>
-                <input>
-
-                </input>
-                <button>Buscar</button>
-            </form>
+                <p id="requiredSelectArea"></p>
+                <label>E que tipo de vaga você procura?</label>
+                <input id="selectVacancy" type="text">
+                <p id="requiredSelectVacancy"></p>
+                <button id="search">Buscar</button>
+            </div>
+            <p class="success" id="sendform"></p>
         </section>
     </main>
     <footer>

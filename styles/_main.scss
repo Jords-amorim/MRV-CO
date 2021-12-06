@@ -23,7 +23,7 @@ main {
 
 main .mainExplore {
    button {
-      @include buttonPrimary();
+      @include buttonPrimary($Q-Cr-Vrd_Prc_1);
    }
 
    img {
@@ -99,7 +99,7 @@ main .mainOurSpace {
       width: $Q-Md-48;
       height: $Q-Md-48;
       background-color: #006b3f;
-      border-radius:  $Q-Md-8 0 0 $Q-Md-8;
+      border-radius: $Q-Md-8 0 0 $Q-Md-8;
    }
 
    [id^="item"] {
@@ -139,7 +139,11 @@ main .mainOurSpace {
 }
 
 main .mainAvailableVacancies {
-   form {
+   p {
+      margin-bottom: 0;
+   }
+   
+   .form-container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -148,16 +152,36 @@ main .mainAvailableVacancies {
 
       select,
       input {
+         height: $Q-Md-40;
          width: 100%;
-         margin-bottom: $Q-Md-24;
+         margin-bottom: $Q-Md-4;
+         border-radius: $Q-Md-8;
+         @include Border($Q-Cr-Cnz_3);
+         color: #5d615f;
       }
 
       label {
+         @include text($Q-Md-16, $Q-Md-24, bold, $Q-Cr-Cnz_1);
          width: 100%;
+         margin-top: $Q-Md-16;
       }
 
       button {
          width: $Q-Md-144;
+         margin-top: $Q-Md-24;
+         @include buttonPrimary($Q-Cr-Vrd_Prc_4);
       }
+
+       .required {
+         color: $Q-Cr-Or;
+         margin-bottom: 0;
+      }
+   }
+
+   .success {
+      @include text(18px, 27px, bold, $Q-Cr-Vrd_Prc_4);
+      margin: 0 auto;
+      text-align: center;
+      margin-top: $Q-Md-24;
    }
 }
