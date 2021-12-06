@@ -1,0 +1,57 @@
+@import "variables";
+@import "utils";
+
+.about {
+    display: none;
+}
+
+.about.active {
+    display: block;
+    margin: auto;
+
+    .about-content {
+        padding: 0 $Q-Md-24;
+        height: calc(100vh - 150px);
+        display: flex;
+        flex-direction: column;
+        padding-top: 40%;
+        justify-content: space-between;
+    }
+   
+    img {
+        width: $Q-Md-112;
+        margin: $Q-Md-24;
+    }
+
+    h1 {
+        @include text($Q-Md-16, 27px, bold, $Q-Cr-Bla);
+    }
+
+    p {
+        @include text(14px, 21px, normal, $Q-Cr-Cnz_1);
+     }
+
+    button {
+        background-color: $Q-Cr-Vrd_Prc_1;
+        width: $Q-Md-48;
+        height: $Q-Md-48;
+        position: absolute;
+        right: 20px;
+        bottom: 70px;
+        border-radius: 50%;
+        border: none;
+        
+        img {
+                 width: auto;
+                 margin: auto;
+        }
+    }
+
+    .footer-about {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        right: 0;
+        margin: auto;
+    }
+}

@@ -33,8 +33,8 @@ document.querySelector("#selectVacancy")
     .addEventListener('keydown', (event) => {
         console.log(event.key)
         event.key
-        ?  document.querySelector("#requiredSelectVacancy").innerHTML = ''
-        : ''
+            ? document.querySelector("#requiredSelectVacancy").innerHTML = ''
+            : ''
 
         error = false
     });
@@ -69,4 +69,20 @@ document.querySelector("#search").addEventListener("click", (e) => {
     if (!error) {
         document.querySelector("#sendform").innerHTML = success;
     }
+});
+
+// Open Modal About Brand
+
+document.querySelector("#aboutBrand").addEventListener("click", (e) => {
+    document.getElementById("header").classList.toggle("active");
+    document.getElementById("main").classList.toggle("active");
+    document.getElementById("about").classList.toggle("active");    
+});
+
+// Close Modal About Brand
+
+document.querySelector("#clode-modal").addEventListener("click", (e) => {
+    document.getElementById("header").classList.remove("active");
+    document.getElementById("main").classList.remove("active");
+    document.getElementById("about").classList.remove("active");    
 });

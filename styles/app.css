@@ -7,9 +7,6 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 @font-face {
@@ -52,9 +49,6 @@ body {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 header .headerWorkWith {
@@ -106,6 +100,10 @@ header nav span {
   color: #242625;
 }
 
+.header.active {
+  display: none;
+}
+
 .flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, main .mainOurSpace .arrow-prev, main .mainOurSpace .arrow-next {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,9 +113,6 @@ header nav span {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .accordion .accordion-item {
@@ -169,6 +164,85 @@ img {
   transition: -webkit-transform 0.2 ease;
   transition: transform 0.2 ease;
   transition: transform 0.2 ease, -webkit-transform 0.2 ease;
+}
+
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, main .mainOurSpace .arrow-prev, main .mainOurSpace .arrow-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.about {
+  display: none;
+}
+
+.about.active {
+  display: block;
+  margin: auto;
+}
+
+.about.active .about-content {
+  padding: 0 24px;
+  height: calc(100vh - 150px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 40%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about.active img {
+  width: 112px;
+  margin: 24px;
+}
+
+.about.active h1 {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.about.active p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #242625;
+}
+
+.about.active button {
+  background-color: #006B3F;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 20px;
+  bottom: 70px;
+  border-radius: 50%;
+  border: none;
+}
+
+.about.active button img {
+  width: auto;
+  margin: auto;
+}
+
+.about.active .footer-about {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  margin: auto;
 }
 
 main {
@@ -288,6 +362,9 @@ main .mainOurSpace .arrow-prev {
   right: 0;
   top: 40%;
   position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 48px;
   height: 48px;
   background-color: #006b3f;
@@ -298,6 +375,9 @@ main .mainOurSpace .arrow-next {
   right: 0;
   top: 40%;
   position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 48px;
   height: 48px;
   background-color: #006b3f;
@@ -337,6 +417,10 @@ main .mainOurSpace #item-2:target ~ .item-2,
 main .mainOurSpace #item-3:target ~ .item-3 {
   z-index: 3;
   opacity: 1;
+}
+
+main .mainAvailableVacancies {
+  max-width: 400px;
 }
 
 main .mainAvailableVacancies p {
@@ -416,5 +500,9 @@ main .mainAvailableVacancies .success {
   margin: 0 auto;
   text-align: center;
   margin-top: 24px;
+}
+
+.main.active {
+  display: none;
 }
 /*# sourceMappingURL=app.css.map */

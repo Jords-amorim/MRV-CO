@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header" class="header">
         <img src="./assets/img-hero-mobile.png" alt="Foto Pessoas Trabalhando" />
         <div class="headerWorkWith">
             <h1>Trabalhe conosco nessa transformação</h1>
@@ -34,7 +34,7 @@
         </nav>
 
     </header>
-    <main>
+    <main id="main" class="main">
         <section class="mainExplore">
             <h1>Explore novas oportunidades na sua carreira</h1>
             <p>
@@ -48,7 +48,7 @@
             </p>
             <img src="./assets/mrv-co.png" alt="Logomarca MRV & CO" />
             <div class="mainExploreLogoCtn">
-                <button>
+                <button id="aboutBrand">
                     <img src="./assets/mrv-pst.png" alt="Logomarca MRV" />
                 </button>
                 <button>
@@ -191,9 +191,28 @@
             <p class="success" id="sendform"></p>
         </section>
     </main>
+    <div id="about" class="about">
+        <img src="./assets/mrv-pst.png" alt="Logomarca MRV" />
+        <div class="about-content">
+            <div>
+                <h1>MRV:</h1>
+                <p>
+                    A Maior Construtora da América Latina é a principal frente de atuação do MRV&CO. Com o propósito de construir sonhos que transformam o mundo, a MRV abre as portas para que milhares de brasileiros possam conquistar um novo lar, com mais benefícios e facilidades.
+                </p>
+            </div>
+            <button>
+                <img 
+                src="./assets/about-brand-out.png" 
+                alt="Fechar Modal Sobre a Marca"
+                id="clode-modal" 
+                class="clode-modal"
+                />
+            </button>
+        </div>
+        <img class="footer-about" src="./assets/nav-footer.png" alt="Rodapé Modal Sobre a Marca" />
+    </div>
     <footer>
     </footer>
     <script src="app.js"></script>
 </body>
-
 </html>
