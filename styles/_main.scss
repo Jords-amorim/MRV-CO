@@ -78,7 +78,7 @@ main {
       border-radius: $Q-Md-16;
 
       @media (min-width: 768px) {
-         height: 264px;         
+         height: 264px;
       }
    }
 
@@ -211,7 +211,7 @@ main {
 
 //Telas maiores 600px
 @media (min-width: 600px) {
-   main {     
+   main {
       .mainAvailableVacancies {
          max-width: auto;
 
@@ -237,7 +237,7 @@ main {
       h1 {
          @include text($Q-Md-32, 40px, bold, $Q-Cr-Cnz_1);
          margin-bottom: 0;
-      }     
+      }
    }
 
    .mainExplore {
@@ -245,25 +245,13 @@ main {
       grid-template-columns: 1fr 1fr;
       align-items: center;
       padding: 0 $Q-Md-56;
-
-      section {
-         margin-bottom: $Q-Md-40;
-      }
-
-      h1 {
-         @include text($Q-Md-40, 60px, bold, $Q-Cr-Cnz_1);
-         margin-bottom: 0;
-      }
+      margin-top: $Q-Md-24;
 
       div {
          max-width: 543px;
       }
       .main-explore-logo-wrapper {
          text-align: center;
-      }
-
-      #aboutBrand {
-         margin-right: 32px;
       }
    }
 
@@ -321,23 +309,29 @@ main {
       }
 
       .grafismo-form {
-         height: 242px ;
+         height: 242px;
       }
    }
 }
 
 //Telas maiores 1144px
-@media(min-width: 1144px) {
+@media (min-width: 1144px) {
    main {
       h1 {
          @include text($Q-Md-40, 60px, bold, $Q-Cr-Cnz_1);
          margin-bottom: 0;
       }
    }
-   main .mainOurValues {
+
+   .mainExplore {
+      #aboutBrand {
+         margin-right: 32px;
+      }
+   }
+   .mainOurValues {
       margin-bottom: 0;
       padding-left: 56px;
-      padding-right:0;
+      padding-right: 0;
       .grafismo {
          display: block;
       }

@@ -2,6 +2,22 @@
 @import "utils";
 
 header {
+    position: relative;
+    width: 100%;
+
+    .hero-img {
+        width: 100%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 0 0 0 $Q-Md-24;
+    }
+
+    .logo-header {
+        position: absolute;
+        margin-left: 24px;
+        margin-top: 8px;
+        width: 97px;
+    }
+
     .headerWorkWith {
         @extend .flex;
         @include gradient();
@@ -9,15 +25,17 @@ header {
         height: $Q-Md-96;
         margin-left: $Q-Md-24;
         border-radius: 16px 0px 0px 16px;
+        position: absolute;
+        bottom: $Q-Md-40;
+        right: 0;
 
         h1 {
             @include text(18px, 22px, bold, $Q-Cr-Brc);
         }
-
     }
 
     nav {
-        padding: $Q-Md-24;
+        padding: $Q-Md-48;
         padding-bottom: 0;
 
         @media (min-width: 1365px) {
@@ -46,8 +64,101 @@ header {
             @include text(14px, 22px, bold, $Q-Cr-Cnz_1);
         }
     }
+
+    // header desktop
+
+    .header-conteiner-desktop {
+        display: none;
+    }
+
+    .hero-img-desktop {
+        display: none;
+    }
 }
 
 .header.active {
     display: none;
- }
+}
+
+//Telas maiores 768px
+@media (min-width: 768px) {
+    header {
+        .logo-header {
+            display: none;
+        }
+        .hero-img {
+            display: none;
+        }
+
+        // header desktop
+
+        .header-conteiner-desktop {
+            display: grid;
+            grid-template-columns: 0.5fr 2fr 0.10fr;
+            gap: 32px;
+            align-items: center;
+            padding: $Q-Md-8 $Q-Md-40;
+            text-align: center;
+            margin-bottom: $Q-Md-48;
+        }
+
+        a {
+            text-decoration: initial;
+        }
+
+        .header-nav-conteiner-primary-desktop {
+            padding: $Q-Md-4 0;
+            min-width: 450px;
+            a {
+                @include text(12px, 22px, normal, $Q-Cr-Cnz_3);
+            }
+        }
+        .header-nav-conteiner-secondary-desktop {
+            padding: $Q-Md-4 0;
+            min-width: 400px;
+
+            background-color: $Q-Cr-Vrd_Prc_1;
+            a {
+                @include text(12px, 22px, normal, $Q-Cr-Brc);
+            }
+        }
+
+        .header-work-with-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1248px;
+            margin: 0 auto;
+        }
+
+        .hero-img-desktop {
+            display: block;
+            width: 100%;
+            height: 304px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 0 $Q-Md-32 $Q-Md-32 0;
+            margin-left: -25px;
+        }
+
+        .headerWorkWith {
+            position: initial;
+            height: 304px;
+            border-radius: $Q-Md-32;
+            z-index: 10;
+            padding: 92px $Q-Md-56;
+            h1 {
+                @include text($Q-Md-24, 30px, bold, $Q-Cr-Brc);
+            }
+        }
+    }
+}
+
+//Telas maiores 1112px
+@media (min-width: 1112px) {
+    header {
+        .headerWorkWith {
+            h1 {
+                @include text($Q-Md-32, 60px, bold, $Q-Cr-Brc);
+            }
+        }
+    }
+}

@@ -7,7 +7,6 @@
 fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome", requestOptions)
   .then(result => result.json())
   .then(states => {
-      console.log(states)
 
      const selectType = document.getElementById("selectType")
 
