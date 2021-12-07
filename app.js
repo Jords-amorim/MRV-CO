@@ -14,7 +14,7 @@ fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome"
        return `<option value="${state.sigla}">${state.nome}</option>`
       
      })    
-     options.unshift(`<option value="" disabled selected>Selecione uma cidade</option>`)
+     options.unshift(`<option value="" disabled selected>Selecione um estado/option>`)
      selectType.innerHTML = options
     })
   .catch(error => console.log('error', error));

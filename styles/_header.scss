@@ -108,7 +108,8 @@ header {
             padding: $Q-Md-4 0;
             min-width: 450px;
             a {
-                @include text(12px, 22px, normal, $Q-Cr-Cnz_3);
+                @include text($Q-Md-16, 22px, normal, $Q-Cr-Cnz_3);
+                margin-right: $Q-Md-8;
             }
         }
         .header-nav-conteiner-secondary-desktop {

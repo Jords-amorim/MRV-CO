@@ -75,5 +75,14 @@
 
     .background-modal-desktop {
         display: block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 10%;
+    }
+
+    .logo-mrv-modal {
+        width: $Q-Md-112;
+        margin: $Q-Md-24;
+        margin-top: -50%;
     }
 }

@@ -29,6 +29,11 @@ main {
 .mainExplore {
    button {
       @include buttonPrimary($Q-Cr-Vrd_Prc_1);
+
+      a {
+         @include text(14px, 21px, normal, $Q-Cr-Brc);
+         text-decoration: none;
+      }
    }
 
    img {
@@ -157,6 +162,7 @@ main {
    @extend .flex;
    justify-content: space-between;
    justify-content: center;
+   padding-top: $Q-Md-40;
 
    p {
       margin-bottom: 0;
