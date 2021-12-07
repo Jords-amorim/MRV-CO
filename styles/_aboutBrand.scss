@@ -5,20 +5,25 @@
     display: none;
 }
 
+.background-modal-desktop {
+    display: none;
+}
+
 .about.active {
     display: block;
     margin: auto;
-
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
     .about-content {
         padding: 0 $Q-Md-24;
-        height: calc(100vh - 150px);
-        display: flex;
-        flex-direction: column;
-        padding-top: 40%;
-        justify-content: space-between;
+        max-width: 612px;
+        margin: 0 auto;
     }
    
-    img {
+    .logo-mrv-modal {
         width: $Q-Md-112;
         margin: $Q-Md-24;
     }
@@ -31,27 +36,44 @@
         @include text(14px, 21px, normal, $Q-Cr-Cnz_1);
      }
 
-    button {
-        background-color: $Q-Cr-Vrd_Prc_1;
-        width: $Q-Md-48;
-        height: $Q-Md-48;
-        position: absolute;
-        right: 20px;
-        bottom: 70px;
-        border-radius: 50%;
-        border: none;
-        
-        img {
-                 width: auto;
-                 margin: auto;
-        }
-    }
+     .footer-modal-wrapper {
+        text-align: -webkit-right;
+     }
 
     .footer-about {
-        position: absolute;
-        bottom: 0;
+        display: block;
         width: 100%;
-        right: 0;
         margin: auto;
+    }
+
+
+.close-modal-btn {
+    background-color: $Q-Cr-Vrd_Prc_1;
+    width: $Q-Md-48;
+    height: $Q-Md-48;
+    margin: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    align-self: end;
+    display: flex;
+    
+    img {
+             width: auto;
+             margin: auto;
+    }
+}
+
+
+
+// Telas maiores 450px
+@media (min-width: 450px) {
+    .footer-about {
+        display: none;
+    }
+
+    .background-modal-desktop {
+        display: block;
     }
 }

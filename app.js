@@ -108,6 +108,6 @@ document.querySelector("#aboutBrand").addEventListener("click", (e) => {
 document.querySelector("#clode-modal").addEventListener("click", (e) => {
     document.getElementById("header").classList.remove("active");
     document.getElementById("main").classList.remove("active");
-    document.getElementById("about").classList.remove("about");
+    document.getElementById("about").classList.remove("active");
     document.getElementById("footer").classList.remove("active");    
 });
