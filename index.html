@@ -130,18 +130,22 @@
                     </div>
                 </div>
             </div>
-            <img src="./assets/grafismo.png">
+            <img class="grafismo" src="./assets/grafismo.png">
         </section>
         <section class="mainOurSpace">
-            <h1>Conheça nosso espaço </h1>
-            <P>
-                Temos um ambiente dinâmico, que estimula o aprendizado e convida todos a pensarem no bem comum. Afinal,
-                estamos construindo hoje as bases para um mundo melhor, cheio de inovação, sustentabilidade e
-                integridade. E tudo isso a gente já encontra por aqui.
-            </P>
-            <a href="#tour">Clique aqui e faça um tour virtual pela nossa
-                sede em BH (MG).
-            </a>
+            <div class="main-our-space-info">
+
+                <h1>Conheça nosso espaço </h1>
+                <P>
+                    Temos um ambiente dinâmico, que estimula o aprendizado e convida todos a pensarem no bem comum.
+                    Afinal,
+                    estamos construindo hoje as bases para um mundo melhor, cheio de inovação, sustentabilidade e
+                    integridade. E tudo isso a gente já encontra por aqui.
+                </P>
+                <a href="#tour">Clique aqui e faça um tour virtual pela nossa
+                    sede em BH (MG).
+                </a>
+            </div>
             <div class="carousel-wrapper">
                 <span id="item-1"></span>
                 <span id="item-2"></span>
@@ -174,33 +178,37 @@
             </div>
         </section>
         <section class="mainAvailableVacancies">
-            <h1>Vagas Disponíveis</h1>
-            <p>
-                Encontre a oportunidade que mais combina com você:
-            </p>
-            <div class="form-container">
-                <label>Em qual cidade você quer trabalhar</label>
-                <select id="selectType">
-                    <option value="">Selecionar um tipo</option>
-                    <option value="Minas Gerais">Minas Gerais</option>
-                    <option value="Rio de Janeiro">Rio de Janeiro</option>
-                </select>
-                <p class="required" id="requiredSelectType"></p>
-                <label>Qual sua área de atuação</label>
-                <select id="selectArea">
-                    <option value="">Selecionar área</option>
-                    <option value="technology">Tecnologia</option>
-                    <option value="financial">Financeiro</option>
-                    <option value="humanResources">Recursos Humanos</option>
-                    <option value="marketing">Marketing</option>
-                </select>
-                <p id="requiredSelectArea"></p>
-                <label>E que tipo de vaga você procura?</label>
-                <input id="selectVacancy" type="text">
-                <p id="requiredSelectVacancy"></p>
-                <button id="search">Buscar</button>
+            <div class="main-available-vacancies-wrapper">
+                <h1>Vagas Disponíveis</h1>
+                <p>
+                    Encontre a oportunidade que mais combina com você:
+                </p>
+                <div class="main-available-vacancies-ctn">
+                    <div class="form-container">
+                        <label>Em qual cidade você quer trabalhar</label>
+                        <select id="selectType">
+                            <option selected disabled>Selecionar uma cidade</option>
+                        </select>
+                        <p class="required" id="requiredSelectType"></p>
+                        <label>Qual sua área de atuação</label>
+                        <select id="selectArea">
+                            <option value="">Selecionar área</option>
+                            <option value="technology">Tecnologia</option>
+                            <option value="financial">Financeiro</option>
+                            <option value="humanResources">Recursos Humanos</option>
+                            <option value="marketing">Marketing</option>
+                        </select>
+                        <p id="requiredSelectArea"></p>
+                        <label>E que tipo de vaga você procura?</label>
+                        <input id="selectVacancy" type="text">
+                        <p id="requiredSelectVacancy"></p>
+                        <button id="search">Buscar</button>
+                    </div>
+                </div>
+                <p class="success" id="sendform"></p>
             </div>
-            <p class="success" id="sendform"></p>
+            <img class="grafismo-form" src="./assets/illustration.png" alt="Ilustração homem segurando uma lupa">
+            <img src="./assets/grafismo.png">
         </section>
     </main>
     <div id="about" class="about">
@@ -221,9 +229,94 @@
         </div>
         <img class="footer-about" src="./assets/nav-footer.png" alt="Rodapé Modal Sobre a Marca" />
     </div>
-    <footer>
+    <footer id="footer" class="footer">
+        <div></div>
+        <div class="registration">
+            <img src="./assets/send.png" alt="Illustração envelope" />
+            <h1>Cadastre-se</h1>
+            <h2>Receba em primeira mão as novidades e lançamentos da MRV.
+            </h2>
+        </div>
+        <div class="list-footer-container">
+            <ul>
+                <img src="./assets/mrv-pst.png" alt="Logomarca MRV" />
+                <h3 clas="listTitle">Contato</h3>
+                <p></p>
+                <li>Fale Conosco</li>
+                <li>Trabalhe Conosco</li>
+                <li>Lojas e Escritórios</li>
+                <li>Compramos Terreno</li>
+                <li>Fale com um Corretor</li>
+                <li>Fornecedores</li>
+            </ul>
+            <ul>
+                <h3 clas="listTitle">Imóveis a Venda</h3>
+                <p></p>
+                <li>Lojas</li>
+                <li>Ofertas</li>
+                <li>Chat 24 horas</li>
+                <li>Minha Casa Minha Vida</li>
+                <li>Simulador de subsídio</li>
+                <li>Imóveis prontos</li>
+                <li>Financiamento</li>
+                <li>Brasileiros no Exterior</li>
+                <li>Como usar seu FGTS</li>
+                <li>Usar Carta de Crédito</li>
+            </ul>
+            <ul>
+                <h3 clas="listTitle">Institucional</h3>
+                <p></p>
+                <li>Por que a MRV?</li>
+                <li>Inovação</li>
+                <li>MRV em Números</li>
+                <li>Sala de Imprensa</li>
+                <li>Acessibilidade</li>
+                <li>Programa de Integridade</li>
+                <li>MRV Decora</li>
+                <li>Blog da MRV</li>
+                <li>Relatório de Sustentabilidade</li>
+                <li>Portas Abertas MRV</li>
+                <li>Sustentabilidade</li>
+                <li>Instituto MRV</li>
+                <li>Ações Sustentáveis</li>
+            </ul>
+            <ul>
+                <h3 clas="listTitle">Investidores</h3>
+                <p></p>
+                <li>Perfil Corporativo</li>
+                <li>Central de Resultados</li>
+                <li>Calendário de Eventos</li>
+                <li>Diretoria e Comitê</li>
+                <li>Estratégias e Vantagens</li>
+                <li>Políticas Corporativas</li>
+                <li>Apresentações</li>
+                <li>Fatos Relevantes</li>
+                <li>Relatório de Sustentabilidade</li>
+                <li>Portas Abertas MRV</li>
+                <li>Sustentabilidade</li>
+                <li>Instituto MRV</li>
+                <li>Ações Sustentáveis</li>
+            </ul>
+            <ul>
+                <h3 clas="listTitle">Clientes</h3>
+                <p></p>
+                <li>Boleto</li>
+                <li>Negociar Minhas Parcelas</li>
+                <li>Assistência Técnica</li>
+                <li>Indicação Premiada</li>
+                <li>Clube de Vantagens</li>
+                <li>Acabamentos</li>
+                <li>Conexão MRV</li>
+                <li>Portal de Relacionamentos</li>
+                <li>App Meu MRV</li>
+                <li>MRV Responde</li>
+            </ul>
+        </div>
+        <p clas="info-footer">MRV todos os direitos reservados | Política de privacidade | Código de conduta | Nova
+            Marca | Mapa do site
+        </p>
+        <span></span>
     </footer>
     <script src="app.js"></script>
 </body>
-
 </html>

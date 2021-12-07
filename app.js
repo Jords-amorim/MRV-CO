@@ -1,3 +1,25 @@
+//
+ var requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
+};
+
+fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome", requestOptions)
+  .then(result => result.json())
+  .then(states => {
+      console.log(states)
+
+     const selectType = document.getElementById("selectType")
+
+    const options = states.map((state) => {
+       return `<option value="${state.sigla}">${state.nome}</option>`
+      
+     })    
+     options.unshift(`<option disabled selected>Selecione uma cidade</option>`)
+     selectType.innerHTML = options
+    })
+  .catch(error => console.log('error', error));
+
 //Accordion
 const accordions = document.querySelectorAll(".accordion-item");
 

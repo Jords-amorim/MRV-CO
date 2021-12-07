@@ -1,0 +1,106 @@
+@import "variables";
+@import "utils";
+
+footer {
+    text-align: center;
+
+    .registration {
+        height: $Q-Md-152;
+        padding: $Q-Md-24;
+        background-color: $Q-Cr-Vrd_Prc_1;
+        justify-content: center;
+
+        h1 {
+            @include text($Q-Md-24, $Q-Md-16, bold, $Q-Cr-Brc);
+        }
+
+        h2 {
+            @include text(12px, $Q-Md-24, normal, $Q-Cr-Brc);
+        }
+    }
+
+    .list-footer-container {
+        padding: $Q-Md-40;
+        padding-left: 50px;
+        padding-bottom: $Q-Md-16;
+        @include text(14px, 20px, normal, $Q-Cr-Cnz_3);
+
+        img {
+            width: 130px;
+        }
+
+        ul {
+            list-style: square;
+
+            p {
+                height: $Q-Md-4;
+                width: $Q-Md-40;
+                background-color: $Q-Cr-Vrd_Prc_1;
+                margin: $Q-Md-8 0 $Q-Md-16 0;
+            }
+
+            h3 {
+                @include text(22px, 20px, bold, $Q-Cr-Cnz_3);
+                margin-top: $Q-Md-24;
+                text-align: start;
+            }
+        }
+
+        li {
+            border-bottom: 1px solid $Q-Cr-Cnz_5;
+            text-align: left;
+        }
+    }
+
+    span {
+        @include BorderBottom($Q-Cr-Cnz_5);
+    }
+    p {
+        @include text(10px, 20px, normal, $Q-Cr-Cnz_3);
+        margin-bottom: $Q-Md-8;
+    }
+}
+
+//Telas maiores 450px
+@media (min-width: 450px) {    
+    footer {
+        .registration{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img {
+                align-self: flex-start;
+            }
+
+            h1 {
+                @include text($Q-Md-32, $Q-Md-24, bold, $Q-Cr-Brc);
+                min-width: 250px;
+            }
+            h2 {
+                @include text($Q-Md-16, $Q-Md-24, bold, $Q-Cr-Brc);
+                max-width: 300px;
+            }
+        }
+       
+      
+        .list-footer-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: $Q-Md-40;
+        }
+    }
+
+}
+
+//Telas maiores 900px
+@media (min-width: 900px) {
+    footer {
+
+        .list-footer-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: $Q-Md-40;
+        }
+    }
+}
