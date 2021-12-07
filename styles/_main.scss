@@ -22,7 +22,11 @@ main {
    }
 }
 
-main .mainExplore {
+.main.active {
+   display: none;
+}
+
+.mainExplore {
    button {
       @include buttonPrimary($Q-Cr-Vrd_Prc_1);
    }
@@ -47,7 +51,7 @@ main .mainExplore {
    }
 }
 
-main .mainOurValues {
+.mainOurValues {
    p {
       margin: 0;
    }
@@ -57,7 +61,7 @@ main .mainOurValues {
    }
 }
 
-main .mainOurSpace {
+.mainOurSpace {
    a {
       @include text(14px, 21px, bold, $Q-Cr-Cnz_1);
    }
@@ -149,7 +153,7 @@ main .mainOurSpace {
    }
 }
 
-main .mainAvailableVacancies {
+.mainAvailableVacancies {
    @extend .flex;
    justify-content: space-between;
    justify-content: center;
@@ -205,10 +209,6 @@ main .mainAvailableVacancies {
    }
 }
 
-.main.active {
-   display: none;
-}
-
 //Telas maiores 600px
 @media (min-width: 600px) {
    main {     
@@ -226,38 +226,6 @@ main .mainAvailableVacancies {
    }
 }
 
-//Telas maiores 768px mainAvailableVacancies
-@media (min-width: 768px) {
-   main {     
-      .mainAvailableVacancies {
-         max-width: auto;
-         justify-content: space-between;
-         padding-left: 56px;
-
-         .main-available-vacancies-wrapper {
-            width: 40%;
-         }
-
-         .main-available-vacancies-ctn {
-            border-right: 1px solid $Q-Cr-Cnz_1;
-         }
-
-         img {
-            display: block;
-         }
-
-         .grafismo-form {
-            height: 242px ;
-         }
-      }
-   }
-
-  main .mainOurSpace .carousel-wrapper {
-      height: 264px;
-   }
-}
-
-
 //Telas maiores 768px
 @media (min-width: 768px) {
    main {
@@ -269,77 +237,94 @@ main .mainAvailableVacancies {
       h1 {
          @include text($Q-Md-32, 40px, bold, $Q-Cr-Cnz_1);
          margin-bottom: 0;
+      }     
+   }
+
+   .mainExplore {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 0 $Q-Md-56;
+
+      section {
+         margin-bottom: $Q-Md-40;
       }
 
-      .mainExplore {
+      h1 {
+         @include text($Q-Md-40, 60px, bold, $Q-Cr-Cnz_1);
+         margin-bottom: 0;
+      }
+
+      div {
+         max-width: 543px;
+      }
+      .main-explore-logo-wrapper {
+         text-align: center;
+      }
+
+      #aboutBrand {
+         margin-right: 32px;
+      }
+   }
+
+   .mainOurValues {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      padding: 56px;
+      padding-top: 0;
+      margin-bottom: 0;
+      margin-bottom: 40px;
+
+      .our-values-wrapper {
+         max-width: 824px;
+      }
+      .accordion-wrapper {
+         max-width: 824px;
          display: grid;
          grid-template-columns: 1fr 1fr;
-         align-items: center;
-         padding: 0 $Q-Md-56;
+         gap: $Q-Md-40;
+      }
+   }
 
-         section {
-            margin-bottom: $Q-Md-40;
-         }
+   .mainOurSpace {
+      padding: 0 $Q-Md-40;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-evenly;
 
-         h1 {
-            @include text($Q-Md-40, 60px, bold, $Q-Cr-Cnz_1);
-            margin-bottom: 0;
-         }
-
-         div {
-            max-width: 543px;
-         }
-         .main-explore-logo-wrapper {
-            text-align: center;
-         }
-
-         #aboutBrand {
-            margin-right: 32px;
-         }
+      .carousel-wrapper {
+         height: 264px;
       }
 
-      .mainOurValues {
-         display: grid;
-         grid-template-columns: 1fr auto;
-         padding: 56px;
-         padding-top: 0;
-         margin-bottom: 0;
-         margin-bottom: 40px;
+      .main-our-space-info {
+         width: 50%;
+         margin-left: $Q-Md-24;
+      }
+   }
 
-         .our-values-wrapper {
-            max-width: 824px;
-         }
-         .accordion-wrapper {
-            max-width: 824px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: $Q-Md-40;
-         }
+   .mainAvailableVacancies {
+      max-width: auto;
+      justify-content: space-between;
+      padding-left: 56px;
+
+      .main-available-vacancies-wrapper {
+         width: 40%;
       }
 
-      .mainOurSpace {
-         padding: 0 $Q-Md-40;
-         display: flex;
-         flex-direction: row-reverse;
-         align-items: center;
-         justify-content: space-evenly;
-
-         .main-our-space-info {
-            width: 50%;
-            margin-left: $Q-Md-24;
-         }
+      .main-available-vacancies-ctn {
+         border-right: 1px solid $Q-Cr-Cnz_1;
       }
 
-      .mainAvailableVacancies {
-         max-width: auto;
+      img {
+         display: block;
+      }
 
-         img {
-            display: block;
-         }
+      .grafismo-form {
+         height: 242px ;
       }
    }
 }
-
 
 //Telas maiores 1144px
 @media(min-width: 1144px) {

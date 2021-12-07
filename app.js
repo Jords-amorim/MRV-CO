@@ -1,4 +1,4 @@
-//
+// Api locales
  var requestOptions = {
   method: 'GET',
   redirect: 'follow'
@@ -15,7 +15,7 @@ fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome"
        return `<option value="${state.sigla}">${state.nome}</option>`
       
      })    
-     options.unshift(`<option disabled selected>Selecione uma cidade</option>`)
+     options.unshift(`<option value="" disabled selected>Selecione uma cidade</option>`)
      selectType.innerHTML = options
     })
   .catch(error => console.log('error', error));
@@ -101,6 +101,7 @@ document.querySelector("#aboutBrand").addEventListener("click", (e) => {
     document.getElementById("header").classList.toggle("active");
     document.getElementById("main").classList.toggle("active");
     document.getElementById("about").classList.toggle("active");    
+    document.getElementById("footer").classList.toggle("active");    
 });
 
 // Close Modal About Brand
@@ -108,5 +109,6 @@ document.querySelector("#aboutBrand").addEventListener("click", (e) => {
 document.querySelector("#clode-modal").addEventListener("click", (e) => {
     document.getElementById("header").classList.remove("active");
     document.getElementById("main").classList.remove("active");
-    document.getElementById("about").classList.remove("active");    
+    document.getElementById("about").classList.remove("about");
+    document.getElementById("footer").classList.remove("active");    
 });

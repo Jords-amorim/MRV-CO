@@ -1,4 +1,4 @@
-.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, main .mainOurSpace .arrow-prev, main .mainOurSpace .arrow-next, main .mainAvailableVacancies, main .mainAvailableVacancies .form-container {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, .mainOurSpace .arrow-prev, .mainOurSpace .arrow-next, .mainAvailableVacancies, .mainAvailableVacancies .form-container, footer .social-midia-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,7 +40,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, main .mainOurSpace .arrow-prev, main .mainOurSpace .arrow-next, main .mainAvailableVacancies, main .mainAvailableVacancies .form-container {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, .mainOurSpace .arrow-prev, .mainOurSpace .arrow-next, .mainAvailableVacancies, .mainAvailableVacancies .form-container, footer .social-midia-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,7 +110,7 @@ header nav span {
   display: none;
 }
 
-.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, main .mainOurSpace .arrow-prev, main .mainOurSpace .arrow-next, main .mainAvailableVacancies, main .mainAvailableVacancies .form-container {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, .mainOurSpace .arrow-prev, .mainOurSpace .arrow-next, .mainAvailableVacancies, .mainAvailableVacancies .form-container, footer .social-midia-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,7 +172,7 @@ img {
   transition: transform 0.2 ease, -webkit-transform 0.2 ease;
 }
 
-.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, main .mainOurSpace .arrow-prev, main .mainOurSpace .arrow-next, main .mainAvailableVacancies, main .mainAvailableVacancies .form-container {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, .mainOurSpace .arrow-prev, .mainOurSpace .arrow-next, .mainAvailableVacancies, .mainAvailableVacancies .form-container, footer .social-midia-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,7 +276,11 @@ main p {
   margin-bottom: 24px;
 }
 
-main .mainExplore button {
+.main.active {
+  display: none;
+}
+
+.mainExplore button {
   height: 48px;
   width: 144px;
   cursor: pointer;
@@ -293,27 +297,27 @@ main .mainExplore button {
   transition: ease;
 }
 
-main .mainExplore button:hover {
+.mainExplore button:hover {
   width: 152px;
 }
 
-main .mainExplore img {
+.mainExplore img {
   display: block;
   margin: 0 auto;
   margin-bottom: 24px;
 }
 
-main .mainExplore .mainExploreLogoCtn {
+.mainExplore .mainExploreLogoCtn {
   text-align: center;
   margin-bottom: 24px;
   display: inline-block;
 }
 
-main .mainExplore .mainExploreLogoCtn img {
+.mainExplore .mainExploreLogoCtn img {
   margin: auto;
 }
 
-main .mainExplore .mainExploreLogoCtn button {
+.mainExplore .mainExploreLogoCtn button {
   height: 48px;
   width: 152px;
   cursor: pointer;
@@ -329,22 +333,22 @@ main .mainExplore .mainExploreLogoCtn button {
           box-shadow: none;
 }
 
-main .mainOurValues p {
+.mainOurValues p {
   margin: 0;
 }
 
-main .mainOurValues .grafismo {
+.mainOurValues .grafismo {
   display: none;
 }
 
-main .mainOurSpace a {
+.mainOurSpace a {
   font-size: 14px;
   line-height: 21px;
   font-weight: bold;
   color: #242625;
 }
 
-main .mainOurSpace .carousel-wrapper {
+.mainOurSpace .carousel-wrapper {
   height: 176px;
   position: relative;
   width: 100%;
@@ -357,12 +361,12 @@ main .mainOurSpace .carousel-wrapper {
 }
 
 @media (min-width: 768px) {
-  main .mainOurSpace .carousel-wrapper {
+  .mainOurSpace .carousel-wrapper {
     height: 264px;
   }
 }
 
-main .mainOurSpace .carousel-item {
+.mainOurSpace .carousel-item {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -373,7 +377,7 @@ main .mainOurSpace .carousel-item {
   transition: all 0.5s ease-in-out;
 }
 
-main .mainOurSpace .arrow-prev {
+.mainOurSpace .arrow-prev {
   left: 0;
   right: 0;
   top: 40%;
@@ -387,7 +391,7 @@ main .mainOurSpace .arrow-prev {
   border-radius: 0 8px 8px 0;
 }
 
-main .mainOurSpace .arrow-next {
+.mainOurSpace .arrow-next {
   right: 0;
   top: 40%;
   position: absolute;
@@ -400,42 +404,42 @@ main .mainOurSpace .arrow-next {
   border-radius: 8px 0 0 8px;
 }
 
-main .mainOurSpace [id^="item"] {
+.mainOurSpace [id^="item"] {
   display: none;
 }
 
-main .mainOurSpace .item-1 {
+.mainOurSpace .item-1 {
   z-index: 2;
   opacity: 1;
   background: url("../assets/img-our-space.png");
   background-size: cover;
 }
 
-main .mainOurSpace .item-2 {
+.mainOurSpace .item-2 {
   background: url("../assets/img-hero-mobile.png");
   background-size: cover;
 }
 
-main .mainOurSpace .item-3 {
+.mainOurSpace .item-3 {
   background: url("../assets/img-our-space.png");
   background-size: cover;
 }
 
-main .mainOurSpace *:target ~ .item-1 {
+.mainOurSpace *:target ~ .item-1 {
   opacity: 0;
 }
 
-main .mainOurSpace #item-1:target ~ .item-1 {
+.mainOurSpace #item-1:target ~ .item-1 {
   opacity: 1;
 }
 
-main .mainOurSpace #item-2:target ~ .item-2,
-main .mainOurSpace #item-3:target ~ .item-3 {
+.mainOurSpace #item-2:target ~ .item-2,
+.mainOurSpace #item-3:target ~ .item-3 {
   z-index: 3;
   opacity: 1;
 }
 
-main .mainAvailableVacancies {
+.mainAvailableVacancies {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -444,11 +448,11 @@ main .mainAvailableVacancies {
           justify-content: center;
 }
 
-main .mainAvailableVacancies p {
+.mainAvailableVacancies p {
   margin-bottom: 0;
 }
 
-main .mainAvailableVacancies .form-container {
+.mainAvailableVacancies .form-container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -461,8 +465,8 @@ main .mainAvailableVacancies .form-container {
   max-width: 400px;
 }
 
-main .mainAvailableVacancies .form-container select,
-main .mainAvailableVacancies .form-container input {
+.mainAvailableVacancies .form-container select,
+.mainAvailableVacancies .form-container input {
   height: 40px;
   width: 100%;
   margin-bottom: 4px;
@@ -471,7 +475,7 @@ main .mainAvailableVacancies .form-container input {
   color: #5d615f;
 }
 
-main .mainAvailableVacancies .form-container label {
+.mainAvailableVacancies .form-container label {
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
@@ -480,7 +484,7 @@ main .mainAvailableVacancies .form-container label {
   margin-top: 16px;
 }
 
-main .mainAvailableVacancies .form-container button {
+.mainAvailableVacancies .form-container button {
   width: 144px;
   margin-top: 24px;
   height: 48px;
@@ -499,16 +503,16 @@ main .mainAvailableVacancies .form-container button {
   transition: ease;
 }
 
-main .mainAvailableVacancies .form-container button:hover {
+.mainAvailableVacancies .form-container button:hover {
   width: 152px;
 }
 
-main .mainAvailableVacancies .form-container .required {
+.mainAvailableVacancies .form-container .required {
   color: #F68B28;
   margin-bottom: 0;
 }
 
-main .mainAvailableVacancies .success {
+.mainAvailableVacancies .success {
   font-size: 18px;
   line-height: 27px;
   font-weight: bold;
@@ -518,11 +522,7 @@ main .mainAvailableVacancies .success {
   margin-top: 24px;
 }
 
-main .mainAvailableVacancies img {
-  display: none;
-}
-
-.main.active {
+.mainAvailableVacancies img {
   display: none;
 }
 
@@ -535,31 +535,6 @@ main .mainAvailableVacancies img {
   }
   main .mainAvailableVacancies .form-container {
     margin-right: 30px;
-  }
-}
-
-@media (min-width: 768px) {
-  main .mainAvailableVacancies {
-    max-width: auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-left: 56px;
-  }
-  main .mainAvailableVacancies .main-available-vacancies-wrapper {
-    width: 40%;
-  }
-  main .mainAvailableVacancies .main-available-vacancies-ctn {
-    border-right: 1px solid #242625;
-  }
-  main .mainAvailableVacancies img {
-    display: block;
-  }
-  main .mainAvailableVacancies .grafismo-form {
-    height: 242px;
-  }
-  main .mainOurSpace .carousel-wrapper {
-    height: 264px;
   }
 }
 
@@ -577,7 +552,7 @@ main .mainAvailableVacancies img {
     color: #242625;
     margin-bottom: 0;
   }
-  main .mainExplore {
+  .mainExplore {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -587,26 +562,26 @@ main .mainAvailableVacancies img {
             align-items: center;
     padding: 0 56px;
   }
-  main .mainExplore section {
+  .mainExplore section {
     margin-bottom: 40px;
   }
-  main .mainExplore h1 {
+  .mainExplore h1 {
     font-size: 40px;
     line-height: 60px;
     font-weight: bold;
     color: #242625;
     margin-bottom: 0;
   }
-  main .mainExplore div {
+  .mainExplore div {
     max-width: 543px;
   }
-  main .mainExplore .main-explore-logo-wrapper {
+  .mainExplore .main-explore-logo-wrapper {
     text-align: center;
   }
-  main .mainExplore #aboutBrand {
+  .mainExplore #aboutBrand {
     margin-right: 32px;
   }
-  main .mainOurValues {
+  .mainOurValues {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr auto;
@@ -616,10 +591,10 @@ main .mainAvailableVacancies img {
     margin-bottom: 0;
     margin-bottom: 40px;
   }
-  main .mainOurValues .our-values-wrapper {
+  .mainOurValues .our-values-wrapper {
     max-width: 824px;
   }
-  main .mainOurValues .accordion-wrapper {
+  .mainOurValues .accordion-wrapper {
     max-width: 824px;
     display: -ms-grid;
     display: grid;
@@ -627,7 +602,7 @@ main .mainAvailableVacancies img {
         grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
-  main .mainOurSpace {
+  .mainOurSpace {
     padding: 0 40px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -643,15 +618,31 @@ main .mainAvailableVacancies img {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  main .mainOurSpace .main-our-space-info {
+  .mainOurSpace .carousel-wrapper {
+    height: 264px;
+  }
+  .mainOurSpace .main-our-space-info {
     width: 50%;
     margin-left: 24px;
   }
-  main .mainAvailableVacancies {
+  .mainAvailableVacancies {
     max-width: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 56px;
   }
-  main .mainAvailableVacancies img {
+  .mainAvailableVacancies .main-available-vacancies-wrapper {
+    width: 40%;
+  }
+  .mainAvailableVacancies .main-available-vacancies-ctn {
+    border-right: 1px solid #242625;
+  }
+  .mainAvailableVacancies img {
     display: block;
+  }
+  .mainAvailableVacancies .grafismo-form {
+    height: 242px;
   }
 }
 
@@ -676,7 +667,7 @@ main .mainAvailableVacancies img {
   }
 }
 
-.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, main .mainOurSpace .arrow-prev, main .mainOurSpace .arrow-next, main .mainAvailableVacancies, main .mainAvailableVacancies .form-container {
+.flex, header .headerWorkWith, header nav li, header nav ul li a, .accordion-header, .mainOurSpace .arrow-prev, .mainOurSpace .arrow-next, .mainAvailableVacancies, .mainAvailableVacancies .form-container, footer .social-midia-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -689,6 +680,11 @@ main .mainAvailableVacancies img {
 
 footer {
   text-align: center;
+}
+
+footer .social-midia-wrapper {
+  margin: 0 auto;
+  width: 50%;
 }
 
 footer .registration {
@@ -753,8 +749,10 @@ footer .list-footer-container li {
   text-align: left;
 }
 
-footer span {
+footer .separator {
   border-bottom: 2px solid #D9DDDB;
+  margin: 0 auto;
+  width: 80%;
 }
 
 footer p {
@@ -762,7 +760,11 @@ footer p {
   line-height: 20px;
   font-weight: normal;
   color: #5D615F;
-  margin-bottom: 8px;
+  margin: 8px;
+}
+
+.footer.active {
+  display: none;
 }
 
 @media (min-width: 450px) {

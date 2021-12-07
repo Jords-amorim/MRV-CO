@@ -4,6 +4,12 @@
 footer {
     text-align: center;
 
+    .social-midia-wrapper {
+        margin: 0 auto;
+        width: 50%;
+        @extend .flex;
+    }
+
     .registration {
         height: $Q-Md-152;
         padding: $Q-Md-24;
@@ -52,14 +58,22 @@ footer {
         }
     }
 
-    span {
+    .separator {
         @include BorderBottom($Q-Cr-Cnz_5);
+        margin: 0 auto;
+        width: 80%;
     }
     p {
         @include text(10px, 20px, normal, $Q-Cr-Cnz_3);
-        margin-bottom: $Q-Md-8;
+        margin: $Q-Md-8;
+        // height: $Q-Md-32;
     }
+
 }
+
+.footer.active {
+    display: none;
+ }
 
 //Telas maiores 450px
 @media (min-width: 450px) {    
